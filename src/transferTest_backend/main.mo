@@ -29,7 +29,7 @@ shared(installer) actor class test()  = this {
             fee = { e8s = LEDGER_TRANSFER_FEE };
             memo = 0;
             from_subaccount = ?subaccount;
-            amount = { e8s = amount };
+            amount = { e8s = amount - LEDGER_TRANSFER_FEE };
             created_at_time = null;
         })) {
             case(#Ok(block_height)){ #ok(block_height) };

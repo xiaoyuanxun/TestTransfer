@@ -35,7 +35,7 @@ async fn main() {
     let account = hex::decode("3eee9b4671b8fde5a501288d74d21ee93042dc202104fa35051563ae35d24f2f").unwrap();
     let response_blob = agent
         .update(&canister_id, "transferOutICP")
-        .with_arg(Encode!(&account, &((10000000 - 10000) as u64)).expect("encode error"))
+        .with_arg(Encode!(&account, &(10000000 as u64)).expect("encode error"))
         .call_and_wait(waiter)
         .await
         .expect("response error");
