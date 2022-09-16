@@ -1,0 +1,18 @@
+[package]
+name = "call"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+path = "src/transferTest_backend_did.rs"
+
+[dependencies]
+tokio = { version = "1.21.1", features = ["full"] }
+ic-agent = "0.20.0"
+hex = "0.4.3"
+garcon = "0.2.3"
+candid = "0.7.16"
+ic-cdk = "0.5.6"
+serde = "1.0.144"
